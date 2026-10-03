@@ -1,0 +1,11 @@
+{
+  "name": "leen-website",
+  "private": true,
+  "type": "module",
+  "description": "Marketing site for Leen — leen.fit",
+  "scripts": {
+    "build": "node build.mjs",
+    "dev": "node scripts/serve.mjs"
+  },
+  "engines": { "node": ">=20" }
+}
