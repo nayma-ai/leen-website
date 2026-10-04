@@ -3,6 +3,7 @@
 // cloud processing only after explicit permission. Review before launch.
 import { site } from './content.mjs';
 
+const company = `<a href="${site.companyUrl}" rel="noopener">${site.company}</a>`;
 const mail = `<a href="mailto:${site.contactEmail}">${site.contactEmail}</a>`;
 
 export const legal = {
@@ -11,7 +12,7 @@ export const legal = {
       title: 'Privacy Policy',
       description: 'How Leen handles your food journal: on your iPhone, no account, and cloud processing only with your permission.',
       html: `
-<p class="prose__lead">Leen is a food journal that runs on your iPhone. It was built privacy-first: there is no account, no login, and no Leen server that stores your journal. This policy explains, plainly, what that means.</p>
+<p class="prose__lead">Leen is a product by ${company}. It is a food journal that runs on your iPhone. It was built privacy-first: there is no account, no login, and no Leen server that stores your journal. This policy explains, plainly, what that means.</p>
 
 <h2>The short version</h2>
 <ul>
@@ -67,7 +68,7 @@ export const legal = {
       title: 'Terms of Use',
       description: 'The terms for using Leen, the food journal for iPhone.',
       html: `
-<p class="prose__lead">Thanks for using Leen. These terms are short on purpose.</p>
+<p class="prose__lead">Leen is a product by ${company}. Thanks for using Leen. These terms are short on purpose.</p>
 
 <h2>The app licence</h2>
 <p>Leen is licensed to you under Apple’s <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">Standard Licensed Application End User License Agreement</a>, together with these terms. If they ever conflict, Apple’s agreement applies.</p>
@@ -98,7 +99,7 @@ export const legal = {
       title: 'سياسة الخصوصية',
       description: 'كيف يتعامل لين مع دفتر أكلك: على جوالك، بدون حساب، والمعالجة السحابية بإذنك فقط.',
       html: `
-<p class="prose__lead">لين دفتر يوميات طعام يشتغل على الآيفون. بنيناه والخصوصية أولًا: ما فيه حساب، ولا تسجيل دخول، ولا خادم للين يخزّن دفترك. هذي السياسة توضّح ببساطة وش يعني هذا.</p>
+<p class="prose__lead">لين منتج من ${company}، ودفتر يوميات طعام يشتغل على الآيفون. بنيناه والخصوصية أولًا: ما فيه حساب، ولا تسجيل دخول، ولا خادم للين يخزّن دفترك. هذي السياسة توضّح ببساطة وش يعني هذا.</p>
 
 <h2>باختصار</h2>
 <ul>
@@ -155,7 +156,7 @@ export const legal = {
       title: 'شروط الاستخدام',
       description: 'شروط استخدام لين، دفتر يوميات الطعام للآيفون.',
       html: `
-<p class="prose__lead">شكرًا لاستخدامك لين. خلّينا هذي الشروط مختصرة عن قصد.</p>
+<p class="prose__lead">لين منتج من ${company}. شكرًا لاستخدامك لين. خلّينا هذي الشروط مختصرة عن قصد.</p>
 
 <h2>ترخيص التطبيق</h2>
 <p>يُرخَّص لك لين بموجب <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" rel="noopener">اتفاقية ترخيص المستخدم النهائي القياسية من آبل</a>، مع هذي الشروط. وإذا تعارضتا، تُطبَّق اتفاقية آبل.</p>

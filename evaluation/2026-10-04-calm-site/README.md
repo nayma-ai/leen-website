@@ -64,3 +64,14 @@ The browser review verifies one iPhone in the hero and none in How it works.
 - [Arabic tablet](ar-tablet.png)
 - [Live hero — English](en-live-hero-1440.png)
 - [Live hero — Arabic mobile](ar-live-hero-390.png)
+
+## Publisher and support contact
+
+Leen is credited to NAYMA, linked to https://www.nayma.ai/, in the footer,
+copyright, bilingual privacy/terms introductions and publisher metadata.
+All seven generated pages use support@leen.fit for contact links. A browser
+check verified the publisher name/URL, legal links, contact address and absence
+of old public branding. The full-page review captures above were refreshed.
+
+- [English NAYMA footer](en-nayma-footer.png)
+- [Arabic NAYMA footer](ar-nayma-footer.png)

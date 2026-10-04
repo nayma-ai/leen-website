@@ -1,7 +1,7 @@
 // Consumer copy for the current Leen journal. Keep English and Arabic aligned.
 export const site = {
   origin: 'https://leen.fit', appStoreUrl: '', testflightUrl: '',
-  contactEmail: 'tan.acute@gmail.com', company: 'Masna', year: 2026, updated: '2026-10-04',
+  contactEmail: 'support@leen.fit', company: 'NAYMA', companyUrl: 'https://www.nayma.ai/', year: 2026, updated: '2026-10-04',
 };
 export const foods = {
   kabsa: { emoji: '🍛', pal: 'honey', en: 'Chicken kabsa', ar: 'كبسة دجاج' },
@@ -36,7 +36,7 @@ export const content = {
       { q: 'How should I read the nutrition numbers?', a: 'They describe the meals you logged, using available food data and estimates. Missing nutrient data is not a complete total. Leen is a food journal, not medical or dietary advice.' },
     ] },
     final: { title: 'Start with a meal.', body: 'A quieter way to keep track of what you eat.' },
-    footer: { tagline: 'A calmer food journal.', privacy: 'Privacy', terms: 'Terms', contact: 'Contact', legal: 'Leen is a journal, not medical advice.', trademarks: 'Apple, iPhone and App Store are trademarks of Apple Inc.', madeIn: 'Made with care, for the food you call familiar.' },
+    footer: { tagline: 'A calmer food journal.', privacy: 'Privacy', terms: 'Terms', contact: 'Contact', legal: 'Leen is a journal, not medical advice.', trademarks: 'Apple, iPhone and App Store are trademarks of Apple Inc.', productBy: 'A product by' },
     legalNav: { back: 'Back to Leen', updated: 'Last updated' },
     notFound: { title: 'This page isn’t in the journal.', body: 'The link may have moved. Let’s get you back to Leen.', home: 'Back to Leen' },
   },
@@ -66,7 +66,7 @@ export const content = {
       { q: 'كيف أقرأ الأرقام الغذائية؟', a: 'تصف الأرقام الوجبات اللي سجّلتها، حسب بيانات الطعام المتاحة والتقديرات. البيانات الناقصة لا تعني إجماليًا كاملًا. لين دفتر طعام، وليس استشارة طبية أو غذائية.' },
     ] },
     final: { title: 'ابدأ بوجبة.', body: 'طريقة أهدأ لتسجيل أكلك.' },
-    footer: { tagline: 'يوميات طعام أهدأ.', privacy: 'الخصوصية', terms: 'الشروط', contact: 'تواصل معنا', legal: 'لين دفتر يوميات، وليس استشارة طبية.', trademarks: 'Apple وiPhone وApp Store علامات تجارية لشركة Apple Inc.', madeIn: 'صُنع بعناية، لأكلك اللي تعرفه وتحبه.' },
+    footer: { tagline: 'يوميات طعام أهدأ.', privacy: 'الخصوصية', terms: 'الشروط', contact: 'تواصل معنا', legal: 'لين دفتر يوميات، وليس استشارة طبية.', trademarks: 'Apple وiPhone وApp Store علامات تجارية لشركة Apple Inc.', productBy: 'منتج من' },
     legalNav: { back: 'العودة إلى لين', updated: 'آخر تحديث' },
     notFound: { title: 'هذي الصفحة مو في الدفتر.', body: 'يمكن الرابط تغيّر. نرجعك إلى لين.', home: 'العودة إلى لين' },
   },

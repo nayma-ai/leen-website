@@ -45,7 +45,7 @@ const footer = (t, { altHref }) => {
     </nav>
   </div>
   <div class="wrap footer__legal">
-    <p>${esc(t.footer.madeIn)}</p>
+    <p>${esc(t.footer.productBy)} <a href="${esc(site.companyUrl)}" rel="noopener">${esc(site.company)}</a></p>
     <p>© ${t.lang === 'ar' ? num(site.year, 'ar') : site.year} ${esc(site.company)}. ${esc(t.footer.legal)}</p>
     <p class="footer__tm">${esc(t.footer.trademarks)}</p>
   </div>
@@ -68,7 +68,7 @@ export function layout(t, { pagePath, altPath, title, description, body, assets,
     description: t.meta.description,
     url,
     image: site.origin + t.meta.ogImage,
-    publisher: { '@type': 'Organization', name: site.company },
+    publisher: { '@type': 'Organization', name: site.company, url: site.companyUrl },
   };
   return `<!doctype html>
 <html lang="${t.lang}" dir="${t.dir}" data-theme="matcha">
