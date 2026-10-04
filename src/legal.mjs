@@ -1,6 +1,5 @@
 // Privacy policy and terms, in both languages.
-// Source: docs/PRIVACY.md in the app repo (2026-07-07), reconciled with
-// docs/RELEASE_PLAN.md (2026-10-02): Apple on-device recognition by default,
+// Source: current app/relay data flows and docs/RELEASE_PLAN.md (2026-10-04): Apple on-device recognition by default,
 // cloud processing only after explicit permission. Review before launch.
 import { site } from './content.mjs';
 
@@ -25,11 +24,12 @@ export const legal = {
 
 <h2>What Leen stores, and where</h2>
 <p><strong>On your device only:</strong> the meals you log, photos you attach, weights, goals, your conversations with Leen and your preferences. This data is kept in the app’s private storage and is removed if you delete the app (unless you enabled iCloud backup — see below).</p>
-<p>Leen does not send your journal to any server we operate, and we operate no database of user journals.</p>
+<p>Leen does not operate a database of user journals. If you choose Online help, the relevant context for your request passes through our service as described below.</p>
 
 <h2>How Leen understands your meals</h2>
 <p><strong>On device (the default).</strong> On iPhones and languages supported by Apple’s on-device model, Leen uses that model to understand what you wrote. On other devices, Leen’s built-in food matching does the work. Either way, this happens entirely on your iPhone. Nutrition values come from Leen’s built-in food catalogue.</p>
-<p><strong>Cloud AI (optional).</strong> If you choose Cloud AI in Settings, Leen first asks for your permission. With your permission, the meal text and photos you send, the profile details you’ve chosen to share with Leen (such as goals) and the journal context needed to answer are sent through Leen’s service to <strong>Anthropic</strong> (the maker of Claude) for processing. Leen’s service forwards the request and returns the response; it does not keep your messages or photos. Anthropic processes requests under its own terms — see the <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Anthropic Privacy Policy</a>. Requests are tied only to an anonymous subscription token — not to an account, email or phone number. Switching back to <em>On device</em> withdraws this permission.</p>
+<p><strong>Online help (optional).</strong> If you choose Online help in Settings, Leen asks for permission first. With permission, meal text, attached photos, profile details and relevant journal context pass through Leen’s service to <strong>Anthropic, Google, or OpenAI</strong>, depending on the configured provider. The service forwards your request and returns the response; it does not keep a journal database. Requests use your anonymous RevenueCat app-user identifier to check subscription access. Switching back to <em>On your iPhone</em> withdraws this permission. Providers process requests under their own policies: <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Anthropic</a>, <a href="https://policies.google.com/privacy" rel="noopener">Google</a>, and <a href="https://openai.com/policies/privacy-policy/" rel="noopener">OpenAI</a>.</p>
+<p>When you request a generated dish image, the description needed to create that image is sent through Leen’s service to Google. This requires internet access. Journal answers about recorded meals are calculated on your iPhone.</p>
 
 <h2>Apple Health (optional)</h2>
 <p>If you enable Apple Health, Leen writes the meals you log (calories, protein, carbohydrates, fat) to Apple Health and reads your active energy to inform your day. This exchange happens on your device, between Leen and Apple Health, under Apple’s privacy protections. Leen does not send Health data anywhere else. You can turn this off in Leen’s Settings and revoke access in the Health app.</p>
@@ -37,17 +37,13 @@ export const legal = {
 <h2>iCloud backup (optional)</h2>
 <p>If you enable iCloud backup, Leen copies your journal and meal photos to <strong>your own iCloud</strong> so you can restore them on a new device. This uses your personal iCloud account and is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple’s Privacy Policy</a>. We have no access to your iCloud contents.</p>
 
-<h2>Barcode scanning (optional)</h2>
-<p>When you scan a product barcode, Leen looks up its nutrition facts in the free <a href="https://world.openfoodfacts.org" rel="noopener">Open Food Facts</a> database by sending only the barcode number. No personal data is included.</p>
 
 <h2>Purchases</h2>
 <p>Subscriptions are handled by <strong>Apple</strong> and <strong>RevenueCat</strong>, our subscription manager. Apple processes payment; we never see your card details. RevenueCat records your subscription status against an anonymous identifier — see <a href="https://www.revenuecat.com/privacy" rel="noopener">RevenueCat’s Privacy Policy</a>.</p>
 
-<h2>Feedback you choose to send</h2>
-<p>Leen keeps a small, on-device list of phrases it couldn’t recognise. Nothing is sent automatically. If you tap “Share Leen feedback” in Settings, that list is handed to the iOS share sheet, and goes only where you choose to send it.</p>
 
 <h2>This website</h2>
-<p>leen.fit uses no cookies, no analytics and no third-party scripts or fonts. Our hosting provider may process standard technical data, such as IP addresses, to deliver the site securely. If you remember a theme on this site, that choice is stored only in your browser.</p>
+<p>leen.fit uses no cookies, no analytics and no third-party scripts or fonts. Our hosting provider may process standard technical data, such as IP addresses, to deliver the site securely. This site does not store a theme preference or journal data in your browser.</p>
 
 <h2>Children</h2>
 <p>Leen is not directed at children under 13 and does not knowingly collect data from them.</p>
@@ -56,7 +52,7 @@ export const legal = {
 <ul>
   <li>Delete any meal or conversation in the app.</li>
   <li>“Start fresh” in Settings removes all meals and conversations.</li>
-  <li>Turn off Cloud AI, Apple Health or iCloud backup at any time.</li>
+  <li>Turn off Online help, Apple Health or iCloud backup at any time.</li>
   <li>Deleting the app removes all on-device data.</li>
 </ul>
 
@@ -83,7 +79,7 @@ export const legal = {
 <p>Leen Pro is an optional auto-renewing subscription. What it includes, and its price, are shown in the app before you subscribe. Payment is charged to your Apple ID at confirmation of purchase. The subscription renews automatically unless cancelled at least 24 hours before the end of the current period. You can manage or cancel it at any time in your Apple ID settings. The free journal keeps working if you don’t subscribe or your subscription ends.</p>
 
 <h2>Optional cloud processing</h2>
-<p>If you turn on Cloud AI, your requests are processed by a third-party AI provider as described in our <a href="/privacy/">Privacy Policy</a>. Please don’t send content you don’t have the right to share.</p>
+<p>If you turn on Online help, your requests are processed by a third-party AI provider as described in our <a href="/privacy/">Privacy Policy</a>. Please don’t send content you don’t have the right to share.</p>
 
 <h2>Your content</h2>
 <p>Your journal is yours. It stays on your device (and your own iCloud, if you enable backup). We don’t claim any rights to it.</p>
@@ -115,11 +111,12 @@ export const legal = {
 
 <h2>وش يحفظ لين، ووين</h2>
 <p><strong>على جهازك فقط:</strong> الوجبات اللي تسجّلها، والصور اللي ترفقها، والأوزان، والأهداف، ومحادثاتك مع لين، وتفضيلاتك. هذي البيانات محفوظة في مساحة التطبيق الخاصة، وتنحذف إذا حذفت التطبيق (إلا إذا فعّلت النسخ الاحتياطي على iCloud — شوف تحت).</p>
-<p>لين ما يرسل دفترك لأي خادم نشغّله، وما عندنا قاعدة بيانات لدفاتر المستخدمين.</p>
+<p>ما عند لين قاعدة بيانات لدفاتر المستخدمين. إذا اخترت المساعدة عبر الإنترنت، يمرّ السياق المرتبط بطلبك عبر خدمتنا كما هو موضّح أدناه.</p>
 
 <h2>كيف يفهم لين وجباتك</h2>
 <p><strong>على الجهاز (الوضع الافتراضي).</strong> على الآيفونات واللغات اللي يدعمها نموذج آبل على الجهاز، يستخدمه لين لفهم اللي كتبته. وعلى الأجهزة الثانية، تتكفّل المطابقة المدمجة في لين بالمهمة. وفي الحالتين، كل شي يصير على جوالك. والقيم الغذائية مأخوذة من قائمة الأطعمة المدمجة في لين.</p>
-<p><strong>الذكاء السحابي (اختياري).</strong> إذا اخترت «الذكاء السحابي» من الإعدادات، يستأذنك لين أول. وبإذنك، يُرسل نص الوجبة والصور اللي ترسلها، وتفاصيل ملفك اللي اخترت تشاركها مع لين (مثل أهدافك)، وسياق الدفتر اللازم للإجابة، عبر خدمة لين إلى <strong>Anthropic</strong> (الشركة المطوّرة لـ Claude) للمعالجة. خدمة لين تمرّر الطلب وترجع الرد، وما تحتفظ برسائلك ولا صورك. وتعالج Anthropic الطلبات وفق شروطها — شوف <a href="https://www.anthropic.com/legal/privacy" rel="noopener">سياسة خصوصية Anthropic</a>. والطلبات ترتبط فقط برمز اشتراك مجهول — مو بحساب ولا إيميل ولا رقم جوال. والرجوع إلى وضع «على الجهاز» يلغي هذا الإذن.</p>
+<p><strong>المساعدة عبر الإنترنت (اختيارية).</strong> إذا اخترتها من الإعدادات، يستأذنك لين أولًا. وبإذنك، يمرّ نص الوجبة والصور المرفقة وتفاصيل ملفك والسياق المرتبط بسجلك عبر خدمة لين إلى <strong>Anthropic أو Google أو OpenAI</strong> حسب المزوّد المُعدّ. تمرّر الخدمة الطلب وتعيد الرد، وما عندها قاعدة بيانات لدفاتر المستخدمين. تستخدم الطلبات معرّف مستخدم RevenueCat المجهول للتحقق من الاشتراك. الرجوع إلى «على جهازك» يلغي هذا الإذن. ويعالج المزوّدون الطلبات وفق سياساتهم: <a href="https://www.anthropic.com/legal/privacy" rel="noopener">Anthropic</a> و<a href="https://policies.google.com/privacy" rel="noopener">Google</a> و<a href="https://openai.com/policies/privacy-policy/" rel="noopener">OpenAI</a>.</p>
+<p>عندما تطلب صورة مولّدة لطبق، يُرسل الوصف اللازم لإنشاء الصورة عبر خدمة لين إلى Google. هذا يحتاج اتصالًا بالإنترنت. أما إجابات الدفتر عن وجباتك المسجّلة فتُحسب على جهازك.</p>
 
 <h2>صحة آبل (اختياري)</h2>
 <p>إذا فعّلت صحة آبل، يكتب لين الوجبات اللي تسجّلها (السعرات، البروتين، الكربوهيدرات، الدهون) في تطبيق صحة آبل، ويقرأ الطاقة النشطة عشان يدخلها في حسبة يومك. هذا التبادل يصير على جهازك، بين لين وصحة آبل، تحت حماية الخصوصية من آبل. ولين ما يرسل بيانات الصحة لأي مكان ثاني. تقدر توقفها من إعدادات لين، وتلغي الوصول من تطبيق الصحة.</p>
@@ -127,17 +124,13 @@ export const legal = {
 <h2>النسخ الاحتياطي على iCloud (اختياري)</h2>
 <p>إذا فعّلت النسخ الاحتياطي، ينسخ لين دفترك وصور وجباتك إلى <strong>iCloud الخاص فيك</strong> عشان تسترجعها على جهاز جديد. هذا يستخدم حسابك الشخصي على iCloud ويخضع لـ<a href="https://www.apple.com/legal/privacy/" rel="noopener">سياسة خصوصية آبل</a>. وما عندنا أي وصول لمحتويات iCloud حقك.</p>
 
-<h2>مسح الباركود (اختياري)</h2>
-<p>لما تمسح باركود منتج، يبحث لين عن قيمه الغذائية في قاعدة بيانات <a href="https://world.openfoodfacts.org" rel="noopener">Open Food Facts</a> المجانية، ويرسل رقم الباركود فقط. بدون أي بيانات شخصية.</p>
 
 <h2>المشتريات</h2>
 <p>الاشتراكات تتم عبر <strong>آبل</strong> و<strong>RevenueCat</strong>، مدير الاشتراكات اللي نستخدمه. آبل تعالج الدفع، وإحنا ما نشوف بيانات بطاقتك أبدًا. وتسجّل RevenueCat حالة اشتراكك مقابل معرّف مجهول — شوف <a href="https://www.revenuecat.com/privacy" rel="noopener">سياسة خصوصية RevenueCat</a>.</p>
 
-<h2>الملاحظات اللي تختار ترسلها</h2>
-<p>يحتفظ لين على جهازك بقائمة صغيرة للعبارات اللي ما قدر يتعرّف عليها. وما ينرسل منها أي شي تلقائيًا. إذا ضغطت «Share Leen feedback» في الإعدادات، تنتقل القائمة إلى قائمة المشاركة في iOS، وتروح بس للمكان اللي تختاره.</p>
 
 <h2>هذا الموقع</h2>
-<p>موقع leen.fit ما يستخدم ملفات تعريف الارتباط، ولا أدوات تحليل، ولا سكربتات أو خطوط من أطراف ثالثة. وقد يعالج مزوّد الاستضافة بيانات تقنية معتادة، مثل عنوان IP، لتقديم الموقع بشكل آمن. وإذا اخترت ثيمًا في هذا الموقع، ينحفظ اختيارك في متصفحك فقط.</p>
+<p>موقع leen.fit ما يستخدم ملفات تعريف الارتباط، ولا أدوات تحليل، ولا سكربتات أو خطوط من أطراف ثالثة. وقد يعالج مزوّد الاستضافة بيانات تقنية معتادة، مثل عنوان IP، لتقديم الموقع بشكل آمن. وما يحفظ الموقع تفضيل ثيم أو بيانات دفتر في متصفحك.</p>
 
 <h2>الأطفال</h2>
 <p>لين غير موجّه للأطفال دون ١٣ سنة، وما يجمع بياناتهم عن علم.</p>
@@ -146,7 +139,7 @@ export const legal = {
 <ul>
   <li>احذف أي وجبة أو محادثة من التطبيق.</li>
   <li>«ابدأ من جديد» في الإعدادات يحذف كل الوجبات والمحادثات.</li>
-  <li>أوقف الذكاء السحابي أو صحة آبل أو النسخ الاحتياطي على iCloud متى ما بغيت.</li>
+  <li>أوقف المساعدة عبر الإنترنت أو صحة آبل أو النسخ الاحتياطي على iCloud متى ما بغيت.</li>
   <li>حذف التطبيق يحذف كل البيانات اللي على الجهاز.</li>
 </ul>
 
@@ -174,7 +167,7 @@ export const legal = {
 <p>«لين برو» اشتراك اختياري يتجدد تلقائيًا. محتواه وسعره يظهرون لك داخل التطبيق قبل ما تشترك. يُحصَّل المبلغ من حساب Apple ID عند تأكيد الشراء، ويتجدد الاشتراك تلقائيًا ما لم يُلغَ قبل نهاية الفترة الحالية بـ٢٤ ساعة على الأقل. وتقدر تديره أو تلغيه في أي وقت من إعدادات Apple ID. والدفتر المجاني يظل شغّال إذا ما اشتركت أو انتهى اشتراكك.</p>
 
 <h2>المعالجة السحابية الاختيارية</h2>
-<p>إذا فعّلت الذكاء السحابي، تُعالج طلباتك عند مزوّد ذكاء اصطناعي خارجي كما هو موضّح في <a href="/ar/privacy/">سياسة الخصوصية</a>. لا ترسل محتوى ما يحق لك مشاركته.</p>
+<p>إذا فعّلت المساعدة عبر الإنترنت، تُعالج طلباتك عند مزوّد ذكاء اصطناعي خارجي كما هو موضّح في <a href="/ar/privacy/">سياسة الخصوصية</a>. لا ترسل محتوى ما يحق لك مشاركته.</p>
 
 <h2>محتواك</h2>
 <p>دفترك ملكك. يظل على جهازك (وعلى iCloud الخاص فيك إذا فعّلت النسخ الاحتياطي)، وما ندّعي أي حق فيه.</p>

@@ -1,0 +1,63 @@
+[
+  {
+    "lang": "ar",
+    "width": 390,
+    "animatedStages": [
+      "hero",
+      "type",
+      "say",
+      "snap"
+    ],
+    "pause": true,
+    "offscreenPause": true,
+    "errors": [],
+    "external": []
+  },
+  {
+    "lang": "en",
+    "width": 390,
+    "animatedStages": [
+      "hero",
+      "type",
+      "say",
+      "snap"
+    ],
+    "pause": true,
+    "offscreenPause": true,
+    "errors": [],
+    "external": []
+  },
+  {
+    "lang": "ar",
+    "width": 1440,
+    "animatedStages": [
+      "hero",
+      "type",
+      "say",
+      "snap"
+    ],
+    "pause": true,
+    "offscreenPause": true,
+    "errors": [],
+    "external": []
+  },
+  {
+    "lang": "en",
+    "width": 1440,
+    "animatedStages": [
+      "hero",
+      "type",
+      "say",
+      "snap"
+    ],
+    "pause": true,
+    "offscreenPause": true,
+    "errors": [],
+    "external": []
+  },
+  {
+    "reducedMotion": true,
+    "explicitPlay": true,
+    "updatedPreference": true
+  }
+]

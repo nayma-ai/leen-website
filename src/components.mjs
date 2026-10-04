@@ -54,48 +54,10 @@ const paths = {
 export const icon = (name, cls = '') =>
   `<svg class="i i--${name} ${cls}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${paths[name]}</svg>`;
 
-/** One food line of a saved-meal card, as in the app's chat. */
-export const mealRow = (t, key, servings, opts = {}) => {
-  const f = foods[key];
-  const lang = t.lang;
-  const per = lang === 'ar' ? f.perAr : f.perEn;
-  const kcal = f.kcal * servings;
-  return `<div class="mrow" data-row="${key}">
-    ${dish(key)}
-    <div class="mrow__main">
-      <div class="mrow__name">${esc(foodName(key, lang))}</div>
-      <div class="mrow__serv" data-serv>${esc(t.app.servings(servings))}</div>
-      ${per ? `<div class="mrow__per">${esc(t.app.perServing)} ${esc(per)}</div>` : ''}
-    </div>
-    <div class="mrow__end">
-      <div class="mrow__kcal">${opts.estimate ? '<span class="tilde">~</span>' : ''}<span data-kcal>${num(kcal, lang)}</span> ${esc(t.app.kcal)}</div>
-      <div class="mrow__edit">${esc(t.app.edit)} ${icon('chev', 'flip-rtl')}</div>
-    </div>
-  </div>`;
-};
-
-export const mealCard = (t, items, extraClass = '') => `<div class="mcard ${extraClass}">
-  <div class="mcard__head">
-    <span class="mcard__saved">${icon('check')} ${esc(t.app.saved)}</span>
-    <span class="mcard__undo">${icon('undo', 'flip-rtl')} ${esc(t.app.undo)}</span>
-  </div>
-  ${items.map((it) => mealRow(t, it.key, it.servings)).join('<div class="mcard__rule"></div>')}
-</div>`;
-
-export const iosStatus = () => `<div class="ios-status" aria-hidden="true">
-  <span class="ios-status__time">9:41</span>
-  <span class="ios-status__icons">
-    <svg viewBox="0 0 18 12" width="18" height="12"><rect x="0" y="8" width="3" height="4" rx=".8"/><rect x="5" y="5.5" width="3" height="6.5" rx=".8"/><rect x="10" y="3" width="3" height="9" rx=".8"/><rect x="15" y="0" width="3" height="12" rx=".8"/></svg>
-    <svg viewBox="0 0 16 12" width="16" height="12"><path d="M8 2.3c2.3 0 4.4.9 6 2.4l1.2-1.2A10.2 10.2 0 0 0 8 .6C5.2.6 2.7 1.7.8 3.5L2 4.7a8.5 8.5 0 0 1 6-2.4zm0 3.4c1.4 0 2.6.5 3.6 1.4L12.8 6A6.8 6.8 0 0 0 8 4c-1.9 0-3.5.7-4.8 2l1.2 1.1c1-.9 2.2-1.4 3.6-1.4zm0 3.4c-.5 0-1 .2-1.3.5L8 11l1.3-1.4c-.3-.3-.8-.5-1.3-.5z"/></svg>
-    <svg viewBox="0 0 27 12" width="25" height="12"><rect x=".5" y=".5" width="22" height="11" rx="3.2" fill="none" stroke="currentColor" opacity=".4"/><rect x="2" y="2" width="19" height="8" rx="2"/><path d="M24 4v4c.8-.3 1.4-1.1 1.4-2S24.8 4.3 24 4z" opacity=".45"/></svg>
-  </span>
-</div>`;
-
-/** iPhone frame. `inner` is the app screen content. */
-export const phone = (inner, { cls = '', attrs = '' } = {}) => `<div class="phone ${cls}" ${attrs}>
-  <div class="phone__screen">
-    <span class="phone__island" aria-hidden="true"></span>
-    ${iosStatus()}
-    ${inner}
+/** Shared front-facing iPhone frame for illustrative app screens. */
+export const phoneFrame = (body, cls = '') => `<div class="iphone ${cls}">
+  <div class="iphone-screen">
+    <div class="iphone-status" aria-hidden="true"><span>9:41</span><span class="iphone-island"></span><svg viewBox="0 0 50 14" width="42" height="12" fill="currentColor"><path d="M1 9h3v4H1zM6 6h3v7H6zM11 3h3v10h-3zM16 0h3v13h-3z"/><path d="M23 4q6-6 12 0l-2 2q-4-4-8 0zm3 3q3-3 6 0l-2 2q-1-1-2 0zm2 3h2v2h-2z"/><rect x="38" y="2" width="10" height="10" rx="2" fill="none" stroke="currentColor"/><rect x="40" y="4" width="6" height="6" rx="1"/><path d="M49 5h1v4h-1z"/></svg></div>
+    <div class="iphone-content">${body}</div><span class="iphone-home" aria-hidden="true"></span>
   </div>
 </div>`;

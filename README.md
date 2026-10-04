@@ -19,12 +19,12 @@ Node 20+ is the only requirement.
 
 | Path | What |
 |---|---|
-| `src/content.mjs` | **All copy**, English and Arabic side by side, plus `site` settings (App Store link, contact email). Demo nutrition numbers come from the app's `NutritionDB.swift`. |
+| `src/content.mjs` | **All copy**, English and Arabic side by side, plus `site` settings (App Store link, contact email). Preview numbers are explicitly illustrative estimates; live answers use recorded meals and available nutrient data. |
 | `src/legal.mjs` | Privacy policy and terms, both languages. |
 | `src/pages.mjs` | Page templates — every section of the homepage, legal pages, 404. |
 | `src/components.mjs` | Shared pieces: food tiles, meal cards, the iPhone frame, icons. |
-| `static/assets/css/site.css` | Design system. Colors mirror `Shared/JournalTheme.swift`; food tiles mirror `ProceduralFoodArt.swift`. |
-| `static/assets/js/site.js` | Hero demo, correction demo, gentle mode, theme picker, mobile menu, reveals. |
+| `static/assets/css/site.css` | Design system. App palette, self-hosted fonts, calm layouts and illustrative food tiles. |
+| `static/assets/js/site.js` | Calorie preview control and local iPhone demos in the hero and How it works. No theme storage. |
 | `scripts/og.mjs` | Regenerates the social preview images (`static/og-en.png`, `og-ar.png`) with headless Chrome. |
 
 Because both languages render from one template, a section can't exist in
@@ -61,3 +61,37 @@ real "Download on the App Store" link. (Set `testflightUrl` instead to show a
 
 Any static host works too (Cloudflare Pages, Netlify, Vercel): build command
 `node build.mjs`, output directory `site`.
+
+## Content and design refresh — 2026-10-04
+
+The homepage has one calm app preview, a compact How it works section, a journal gallery, a focused
+Free/Pro comparison, a privacy note and four FAQs. English and Arabic share
+the same structure. Removed the repeating food marquees, looping hero conversation and
+correction demos, feature bento, theme picker and separate brand-story section.
+The illustrative previews use compact day headings and meal cards without
+Saved/Undo/Edit controls. Weekly details are collapsed in the gallery preview.
+
+Pro copy covers local historical nutrient questions, comparisons, trends and
+reflections. Journal answers work offline; optional Online help requires
+permission and internet access. Photo usage is limited. Live prices and an
+unavailable App Store/beta link are not invented. Apple model availability is
+qualified in the FAQ. Privacy names all three configured providers and removes
+obsolete development feedback controls. No hosting or release setting changed.
+
+Browser review and screenshots: [evaluation/2026-10-04-calm-site/README.md](evaluation/2026-10-04-calm-site/README.md).
+
+### Retained How it works
+
+The original Type it / Say it / Snap it section returns after the hero in a
+compact three-card layout, stacked on mobile. Live input, voice and plate demos show typing, transcription and photo reading.
+They pause offscreen or in a background tab, offer a pause control, and start
+with a complete still preview when reduced motion is preferred. English and Arabic photo copy identifies
+the optional Pro feature, permission and internet requirement. The hero link
+and desktop navigation lead to this section.
+
+### Live hero iPhone preview
+
+Only the hero uses the iPhone shell, with a graphite rim, side buttons, status
+bar, Dynamic Island and home indicator. Its live entry sequence reveals journal
+meal cards. How it works retains the compact live typing, voice and photo demo
+cards without device frames. Pause controls and reduced motion apply to both.
