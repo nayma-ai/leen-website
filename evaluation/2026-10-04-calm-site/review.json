@@ -1,0 +1,111 @@
+[
+  {
+    "name": "en-desktop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scrollWidth": 1440,
+    "headings": 1,
+    "dir": "ltr",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "ar-desktop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scrollWidth": 1440,
+    "headings": 1,
+    "dir": "rtl",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "en-mobile",
+    "lang": "en",
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "headings": 1,
+    "dir": "ltr",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "ar-mobile",
+    "lang": "ar",
+    "width": 390,
+    "height": 844,
+    "scrollWidth": 390,
+    "headings": 1,
+    "dir": "rtl",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "en-tablet",
+    "lang": "en",
+    "width": 768,
+    "height": 1024,
+    "scrollWidth": 768,
+    "headings": 1,
+    "dir": "ltr",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "ar-tablet",
+    "lang": "ar",
+    "width": 768,
+    "height": 1024,
+    "scrollWidth": 768,
+    "headings": 1,
+    "dir": "rtl",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "en-small",
+    "lang": "en",
+    "width": 320,
+    "height": 740,
+    "scrollWidth": 320,
+    "headings": 1,
+    "dir": "ltr",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "ar-small",
+    "lang": "ar",
+    "width": 320,
+    "height": 740,
+    "scrollWidth": 320,
+    "headings": 1,
+    "dir": "rtl",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  },
+  {
+    "name": "en-dark",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "dark": true,
+    "scrollWidth": 1440,
+    "headings": 1,
+    "dir": "ltr",
+    "sections": 7,
+    "errors": [],
+    "network": []
+  }
+]
