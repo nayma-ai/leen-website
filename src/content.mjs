@@ -1,7 +1,7 @@
 // Consumer copy for the current Leen journal. Keep English and Arabic aligned.
 export const site = {
   origin: 'https://leen.fit', appStoreUrl: '', testflightUrl: '',
-  contactEmail: 'support@leen.fit', company: 'NAYMA', companyUrl: 'https://www.nayma.ai/', year: 2026, updated: '2026-10-09',
+  contactEmail: 'support@leen.fit', company: 'NAYMA', companyUrl: 'https://www.nayma.ai/', year: 2026, updated: '2026-10-10',
 };
 export const foods = {
   kabsa: { emoji: '🍛', pal: 'honey', en: 'Chicken kabsa', ar: 'كبسة دجاج' },
