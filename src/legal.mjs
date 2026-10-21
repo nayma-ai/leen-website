@@ -17,7 +17,7 @@ export const legal = {
 <h2>The short version</h2>
 <ul>
   <li>Your food journal lives <strong>on your iPhone</strong>. We don’t have a copy.</li>
-  <li>There is <strong>no sign-up and no account</strong>. We never ask for your name, email or phone number. A name you choose to tell Leen is stored on your device.</li>
+  <li>There is <strong>no sign-up and no account</strong>. No email or phone number is required. An optional name is stored on your device and may be included in relevant context if you allow Online help.</li>
   <li>On supported iPhones, Leen understands your meals <strong>on the device</strong>, using Apple’s on-device model.</li>
   <li>Cloud processing is <strong>optional and off</strong> until you give permission. You can turn it off at any time.</li>
   <li>We <strong>don’t track you, show ads or sell data</strong>. The app contains no third-party advertising or analytics SDKs.</li>
@@ -33,7 +33,7 @@ export const legal = {
 <p>For bounded online text, Leen’s service keeps an encrypted response cache for up to ten minutes to handle retries. Monthly quota counts, request hashes and retry metadata use a hashed pseudonymous identifier and expire shortly after the monthly allowance resets. This is not a database of complete journals. Journal answers about recorded meals are calculated on your iPhone.</p>
 
 <h2>Apple Health (optional)</h2>
-<p>If you enable Apple Health, Leen writes the meals you log (calories, protein, carbohydrates, fat) to Apple Health and reads your active energy to inform your day. This exchange happens on your device, between Leen and Apple Health, under Apple’s privacy protections. Leen does not send Health data anywhere else. You can turn this off in Leen’s Settings and revoke access in the Health app.</p>
+<p>If you enable Apple Health, Leen writes the meals you log (calories, protein, carbohydrates, fat) to Apple Health and reads your active energy to inform your day. This exchange happens on your device, between Leen and Apple Health, under Apple’s privacy protections. Health records are not uploaded as a dataset. If you also enable Online help, relevant conversation context can include an active-energy summary from Apple Health. Choose <em>On your iPhone</em> to keep these summaries on device. You can turn this off in Leen’s Settings and revoke access in the Health app.</p>
 
 <h2>iCloud backup (optional)</h2>
 <p>If you enable iCloud backup, Leen copies your journal and meal photos to <strong>your own iCloud</strong> so you can restore them on a new device. This uses your personal iCloud account and is governed by <a href="https://www.apple.com/legal/privacy/" rel="noopener">Apple’s Privacy Policy</a>. We have no access to your iCloud contents.</p>
@@ -104,7 +104,7 @@ export const legal = {
 <h2>باختصار</h2>
 <ul>
   <li>دفتر أكلك يعيش <strong>على جوالك</strong>. وما عندنا نسخة منه.</li>
-  <li><strong>بدون تسجيل وبدون حساب</strong>. ما نطلب اسمك ولا إيميلك ولا رقمك. وإذا قلت للين اسمك، ينحفظ على جهازك.</li>
+  <li><strong>بدون تسجيل وبدون حساب</strong>. ما نطلب إيميلك ولا رقمك. الاسم اختياري وينحفظ على جهازك، وقد يُضمّن في السياق المرتبط بطلبك إذا سمحت بالمساعدة عبر الإنترنت.</li>
   <li>على الآيفونات المدعومة، يفهم لين وجباتك <strong>على الجهاز نفسه</strong> باستخدام نموذج آبل على الجهاز.</li>
   <li>المعالجة السحابية <strong>اختيارية ومقفلة</strong> لين ما تعطي إذنك، وتقدر توقفها متى ما بغيت.</li>
   <li><strong>ما نتتبعك، ولا نعرض إعلانات، ولا نبيع بيانات</strong>. التطبيق ما فيه أي أدوات إعلانات أو تحليلات من أطراف ثالثة.</li>
@@ -120,7 +120,7 @@ export const legal = {
 <p>للمساعدة النصية المحدودة، تحتفظ خدمة لين بردود مشفّرة لمدة تصل إلى عشر دقائق لمعالجة إعادة المحاولة. تستخدم عدّادات الحصة الشهرية وبصمات الطلبات وبيانات إعادة المحاولة معرّفًا مستعارًا مجزّأً، وتنتهي صلاحيتها بعد تجديد الحصة الشهرية بوقت قصير. هذه ليست قاعدة بيانات للدفاتر الكاملة. أما إجابات الدفتر عن وجباتك المسجّلة فتُحسب على جهازك.</p>
 
 <h2>صحة آبل (اختياري)</h2>
-<p>إذا فعّلت صحة آبل، يكتب لين الوجبات اللي تسجّلها (السعرات، البروتين، الكربوهيدرات، الدهون) في تطبيق صحة آبل، ويقرأ الطاقة النشطة عشان يدخلها في حسبة يومك. هذا التبادل يصير على جهازك، بين لين وصحة آبل، تحت حماية الخصوصية من آبل. ولين ما يرسل بيانات الصحة لأي مكان ثاني. تقدر توقفها من إعدادات لين، وتلغي الوصول من تطبيق الصحة.</p>
+<p>إذا فعّلت صحة آبل، يكتب لين الوجبات اللي تسجّلها (السعرات، البروتين، الكربوهيدرات، الدهون) في تطبيق صحة آبل، ويقرأ الطاقة النشطة عشان يدخلها في حسبة يومك. هذا التبادل يصير على جهازك، بين لين وصحة آبل، تحت حماية الخصوصية من آبل. ما تُرفع سجلات الصحة كقاعدة بيانات. وإذا فعّلت المساعدة عبر الإنترنت أيضًا، قد يتضمن سياق المحادثة المرتبط بطلبك ملخصًا للطاقة النشطة من صحة آبل. اختر «على جهازك» عشان تظل هذي الملخصات على الجهاز. تقدر توقفها من إعدادات لين، وتلغي الوصول من تطبيق الصحة.</p>
 
 <h2>النسخ الاحتياطي على iCloud (اختياري)</h2>
 <p>إذا فعّلت النسخ الاحتياطي، ينسخ لين دفترك وصور وجباتك إلى <strong>iCloud الخاص فيك</strong> عشان تسترجعها على جهاز جديد. هذا يستخدم حسابك الشخصي على iCloud ويخضع لـ<a href="https://www.apple.com/legal/privacy/" rel="noopener">سياسة خصوصية آبل</a>. وما عندنا أي وصول لمحتويات iCloud حقك.</p>
